@@ -18,7 +18,7 @@
     <input type="checkbox" name="select" value="${product.productCode}">
     productCode : ${product.productCode} <br>
     price :  ${product.price} bath <br>
-    <input type="number" min="1"  maxlength="4" name="${product.productCode}"  size="4" > <br>
+    <input type="number" min="1"  max="99" name="${product.productCode}" > <br>
     ------------------------------------------------------
 </c:forEach>
     <br>
