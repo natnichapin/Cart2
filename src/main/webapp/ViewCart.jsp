@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Natnicha
@@ -7,10 +8,25 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <title>View</title>
+</head>
+<body>
+<h1>View Cart</h1>
+<hr>
+<c:if test="${message!=null}">
+<h2> ${message} </h2>
+</c:if>
+<c:forEach items="${cart.getItems()}" var="cartItem" varStatus="vs">
+    <h1>   ${cartItem.product.productName}   </h1>
+    <h3>  Number :  ${cartItem.amount}   </h3>
+    <h3>   ${cartItem.getLineItemTotal()} bath   </h3>
+------------------------------------------------------
+
+</c:forEach>
+<br>
+<c:if test="${message==null}">
+<h2> total : ${cart.getCartTotal()} bath </h2>
+</c:if>
+</body>
 </html>
