@@ -14,7 +14,7 @@
 <body>
 <form action="add_to_cart_021Servlet" method="post">
 <c:forEach items="${ListP}" var="product" varStatus="vs">
-    <h2> getProductName : ${product.productName} </h2> <br>
+    <h2> ProductName : ${product.productName} </h2> <br>
     <input type="checkbox" name="select" value="${product.productCode}">
     productCode : ${product.productCode} <br>
     price :  ${product.price} bath <br>
